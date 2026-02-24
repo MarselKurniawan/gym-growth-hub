@@ -55,7 +55,7 @@ const ROISection = () => {
               Recommended
             </div>
             <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">Dengan FIT TOP</div>
-            <div className="text-4xl font-extrabold text-foreground mb-1">2-3 Tahun</div>
+            <div className="text-4xl font-extrabold text-foreground mb-1">3 Tahun</div>
             <p className="text-sm text-muted-foreground mb-5">Balik modal dengan full management</p>
             <div className="space-y-2.5">
               {["Sistem operasional terstruktur", "Marketing & presale teruji", "SDM tersertifikasi profesional", "Financial forecast & EBITDA jelas"].map((item) => (
