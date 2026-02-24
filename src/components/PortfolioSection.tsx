@@ -36,18 +36,27 @@ const PortfolioSection = () => {
           initial={{ opacity: 0, y: 15 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.3 }}
-          className="flex flex-wrap justify-center gap-3 mt-8 max-w-3xl mx-auto"
+          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-10 max-w-4xl mx-auto"
         >
           {[
-            "Bandung", "Bekasi", "Bali", "Ubud",
-            "Cinere", "Cengkareng", "Jakarta", "Sulawesi",
-          ].map((name) => (
-            <span
-              key={name}
-              className="text-xs font-medium text-muted-foreground border border-border rounded-full px-3 py-1"
+            { city: "Jakarta", gyms: ["4FIT Cengkareng", "Palm Fitness", "NTIATOS"] },
+            { city: "Bekasi", gyms: ["REVO TOWN Bekasi", "Gym Bekasi Pekayon"] },
+            { city: "Bandung", gyms: ["Indeep Gym", "Extira Gym", "Maximl Fitness"] },
+            { city: "Bali", gyms: ["Prezo Gym Nusa Dua", "Prezo Gym Ubud", "Banjar Ubud"] },
+            { city: "Depok & Cinere", gyms: ["WILLI Cinere", "Voga Cinere", "NNORA Fitness"] },
+            { city: "Lainnya", gyms: ["Globalo Fitness", "ADA Sport Club", "One Life Smart Gym"] },
+          ].map((loc) => (
+            <div
+              key={loc.city}
+              className="bg-secondary/50 rounded-xl p-4 border border-border"
             >
-              {name}
-            </span>
+              <h4 className="font-bold text-sm text-foreground mb-2">{loc.city}</h4>
+              <ul className="space-y-1">
+                {loc.gyms.map((gym) => (
+                  <li key={gym} className="text-xs text-muted-foreground">• {gym}</li>
+                ))}
+              </ul>
+            </div>
           ))}
         </motion.div>
       </div>
