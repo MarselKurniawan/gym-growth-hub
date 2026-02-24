@@ -1,13 +1,15 @@
-import { useState } from "react";
 import { X } from "lucide-react";
 
-const TopBanner = () => {
-  const [visible, setVisible] = useState(true);
+interface TopBannerProps {
+  visible: boolean;
+  onClose: () => void;
+}
 
+const TopBanner = ({ visible, onClose }: TopBannerProps) => {
   if (!visible) return null;
 
   return (
-    <div className="sticky top-0 z-[60] bg-primary text-primary-foreground text-center text-xs md:text-sm py-2 px-4 relative">
+    <div className="bg-primary text-primary-foreground text-center text-xs md:text-sm py-2 px-4 relative">
       <span>
         Percepat balik modal gym Anda jadi <strong>3 tahun</strong> — Konsultasi gratis sekarang!{" "}
         <a
@@ -20,7 +22,7 @@ const TopBanner = () => {
         </a>
       </span>
       <button
-        onClick={() => setVisible(false)}
+        onClick={onClose}
         className="absolute right-3 top-1/2 -translate-y-1/2 hover:opacity-70"
         aria-label="Close"
       >
