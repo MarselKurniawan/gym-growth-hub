@@ -7,57 +7,44 @@ const PortfolioSection = () => {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section className="section-dark py-20 md:py-28">
+    <section className="py-20 md:py-28 bg-background">
       <div className="container mx-auto px-4" ref={ref}>
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
-          className="text-center max-w-2xl mx-auto mb-12"
+          className="text-center max-w-xl mx-auto mb-12"
         >
           <span className="text-primary font-semibold text-sm tracking-wider uppercase">Portofolio</span>
-          <h2 className="text-4xl md:text-5xl mt-3 mb-4">
-            SUDAH <span className="text-primary">TERBUKTI</span> DI SELURUH INDONESIA
+          <h2 className="text-3xl md:text-4xl font-extrabold mt-3 mb-4 text-foreground">
+            Terbukti di Seluruh Indonesia
           </h2>
-          <p className="text-hero-dark-foreground/60 text-lg font-body">
-            Jabodetabek, Jawa, Bali, Sulawesi, Kalimantan, dan Sumatera — kami sudah ada di sana.
+          <p className="text-muted-foreground leading-relaxed">
+            Jabodetabek, Jawa, Bali, Sulawesi, Kalimantan, dan Sumatera.
           </p>
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
+          initial={{ opacity: 0, scale: 0.97 }}
           animate={inView ? { opacity: 1, scale: 1 } : {}}
-          transition={{ delay: 0.2 }}
-          className="max-w-5xl mx-auto"
+          transition={{ delay: 0.15 }}
+          className="max-w-4xl mx-auto"
         >
-          <img
-            src={portfolio}
-            alt="Portofolio FIT TOP Management"
-            className="w-full rounded-2xl border border-hero-dark-foreground/10"
-          />
+          <img src={portfolio} alt="Portofolio FIT TOP" className="w-full rounded-2xl border border-border shadow-sm" />
         </motion.div>
 
-        {/* Partner names */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 15 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ delay: 0.4 }}
-          className="flex flex-wrap justify-center gap-4 mt-10 max-w-4xl mx-auto"
+          transition={{ delay: 0.3 }}
+          className="flex flex-wrap justify-center gap-3 mt-8 max-w-3xl mx-auto"
         >
           {[
-            "NTIATOS Bandung",
-            "REVO TOWN Bekasi",
-            "Nusa Dua Bali",
-            "Ubud Bali",
-            "NNORA FITNESS",
-            "WILLI Cinere",
-            "4FIT Cengkareng",
-            "PALM FITNESS",
-            "GLOBALO Fitness",
-            "ADA Sport Club",
+            "Bandung", "Bekasi", "Bali", "Ubud",
+            "Cinere", "Cengkareng", "Jakarta", "Sulawesi",
           ].map((name) => (
             <span
               key={name}
-              className="text-xs font-semibold tracking-wider text-hero-dark-foreground/40 border border-hero-dark-foreground/10 rounded-full px-4 py-1.5"
+              className="text-xs font-medium text-muted-foreground border border-border rounded-full px-3 py-1"
             >
               {name}
             </span>
