@@ -1,0 +1,95 @@
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import { Menu, X, Phone } from "lucide-react";
+import logo from "@/assets/logo.jpg";
+
+const navLinks = ["Tentang", "Layanan", "Keunggulan", "Proses", "Kontak"];
+
+const Navbar = () => {
+  const [scrolled, setScrolled] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 50);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollTo = (id: string) => {
+    document.getElementById(id.toLowerCase())?.scrollIntoView({ behavior: "smooth" });
+    setMobileOpen(false);
+  };
+
+  return (
+    <motion.nav
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled ? "bg-background/95 backdrop-blur-md shadow-lg" : "bg-transparent"
+      }`}
+    >
+      <div className="container mx-auto px-4 py-3 flex items-center justify-between">
+        <img src={logo} alt="FIT TOP" className="h-12 w-auto" />
+
+        <div className="hidden md:flex items-center gap-8">
+          {navLinks.map((link) => (
+            <button
+              key={link}
+              onClick={() => scrollTo(link)}
+              className={`text-sm font-semibold tracking-wide transition-colors hover:text-primary ${
+                scrolled ? "text-foreground" : "text-primary-foreground"
+              }`}
+            >
+              {link}
+            </button>
+          ))}
+          <a
+            href="https://wa.me/6283898082061"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-primary/90 transition-colors"
+          >
+            <Phone className="w-4 h-4" />
+            Konsultasi Gratis
+          </a>
+        </div>
+
+        <button
+          onClick={() => setMobileOpen(!mobileOpen)}
+          className={`md:hidden ${scrolled ? "text-foreground" : "text-primary-foreground"}`}
+        >
+          {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+        </button>
+      </div>
+
+      {mobileOpen && (
+        <motion.div
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="md:hidden bg-background border-t border-border px-4 py-4 space-y-3"
+        >
+          {navLinks.map((link) => (
+            <button
+              key={link}
+              onClick={() => scrollTo(link)}
+              className="block w-full text-left text-foreground font-semibold py-2"
+            >
+              {link}
+            </button>
+          ))}
+          <a
+            href="https://wa.me/6283898082061"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 bg-primary text-primary-foreground px-5 py-3 rounded-lg font-semibold text-sm justify-center"
+          >
+            <Phone className="w-4 h-4" />
+            Konsultasi Gratis
+          </a>
+        </motion.div>
+      )}
+    </motion.nav>
+  );
+};
+
+export default Navbar;
