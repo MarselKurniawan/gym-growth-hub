@@ -7,7 +7,7 @@ const TopBanner = () => {
   if (!visible) return null;
 
   return (
-    <div className="bg-primary text-primary-foreground text-center text-xs md:text-sm py-2 px-4 relative">
+    <div className="sticky top-0 z-[60] bg-primary text-primary-foreground text-center text-xs md:text-sm py-2 px-4 relative">
       <span>
         Percepat balik modal gym Anda jadi <strong>3 tahun</strong> — Konsultasi gratis sekarang!{" "}
         <a
