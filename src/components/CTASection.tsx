@@ -15,32 +15,18 @@ const CTASection = () => {
           transition={{ duration: 0.7, ease: "easeOut" }}
           className="relative overflow-hidden rounded-[2rem] md:rounded-[2.5rem]"
         >
-          {/* Main gradient background */}
-          <div className="absolute inset-0 bg-gradient-to-br from-[hsl(0,80%,52%)] via-[hsl(0,75%,45%)] to-[hsl(0,60%,28%)]" />
+          {/* Solid background */}
+          <div className="absolute inset-0 bg-[hsl(0,75%,45%)]" />
 
           {/* Decorative geometric shapes */}
-          <div className="absolute top-0 right-0 w-[500px] h-[500px] opacity-[0.08]">
-            <div className="absolute top-[-100px] right-[-100px] w-[400px] h-[400px] border-[60px] border-white rounded-full" />
-          </div>
-          <div className="absolute bottom-0 left-0 w-[350px] h-[350px] opacity-[0.06]">
-            <div className="absolute bottom-[-80px] left-[-80px] w-[300px] h-[300px] border-[50px] border-white rounded-full" />
-          </div>
-          <div className="absolute top-[40%] left-[15%] w-20 h-20 border-4 border-white/10 rounded-2xl rotate-45" />
-          <div className="absolute top-[20%] right-[20%] w-14 h-14 border-4 border-white/10 rounded-full" />
-          <div className="absolute bottom-[25%] right-[12%] w-10 h-10 border-4 border-white/[0.07] rounded-lg rotate-12" />
-
-          {/* Dot pattern overlay */}
-          <div
-            className="absolute inset-0 opacity-[0.04]"
-            style={{
-              backgroundImage: "radial-gradient(circle, white 1px, transparent 1px)",
-              backgroundSize: "24px 24px",
-            }}
-          />
-
-          {/* Glow effects */}
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-white/[0.06] blur-[100px] rounded-full" />
-          <div className="absolute bottom-0 right-0 w-[400px] h-[200px] bg-black/10 blur-[80px] rounded-full" />
+          <div className="absolute top-[-60px] right-[-60px] w-[280px] h-[280px] border-[40px] border-white/[0.08] rounded-full" />
+          <div className="absolute bottom-[-50px] left-[-50px] w-[220px] h-[220px] border-[35px] border-white/[0.06] rounded-full" />
+          <div className="absolute top-[15%] right-[8%] w-24 h-24 border-[3px] border-white/[0.1] rounded-2xl rotate-45" />
+          <div className="absolute bottom-[20%] left-[6%] w-16 h-16 border-[3px] border-white/[0.08] rounded-full" />
+          <div className="absolute top-[50%] right-[25%] w-10 h-10 border-[3px] border-white/[0.07] rounded-lg rotate-12" />
+          <div className="absolute top-[30%] left-[20%] w-6 h-6 bg-white/[0.06] rounded-full" />
+          <div className="absolute bottom-[35%] right-[15%] w-4 h-4 bg-white/[0.05] rounded-full" />
+          <div className="absolute top-[70%] left-[35%] w-14 h-14 border-[2px] border-white/[0.06] rounded-xl -rotate-12" />
 
           {/* Content wrapper */}
           <div className="relative z-10 px-6 py-16 md:px-16 md:py-24 lg:px-24">
