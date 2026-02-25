@@ -91,7 +91,7 @@ const Navbar = () => {
         </motion.nav>
       </div>
       {/* Spacer to push content below fixed header */}
-      <div className={bannerVisible ? "h-[100px] md:h-[104px]" : "h-[56px] md:h-[64px]"} />
+      <div className={bannerVisible ? "h-[88px] md:h-[100px]" : "h-[56px] md:h-[64px]"} />
     </>
   );
 };

@@ -74,7 +74,7 @@ const HeroSection = () => {
               {[
                 { num: "20+", label: "Tahun Pengalaman" },
                 { num: "50+", label: "Gym Dikelola" },
-                { num: "2-3 Thn", label: "Balik Modal" },
+                { num: "3 Thn", label: "Balik Modal" },
               ].map((stat) => (
                 <div key={stat.label}>
                   <div className="text-2xl md:text-3xl font-extrabold text-foreground">{stat.num}</div>
