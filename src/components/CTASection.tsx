@@ -15,18 +15,30 @@ const CTASection = () => {
           transition={{ duration: 0.7, ease: "easeOut" }}
           className="relative overflow-hidden rounded-[2rem] md:rounded-[2.5rem]"
         >
-          {/* Solid background */}
-          <div className="absolute inset-0 bg-primary" />
+          {/* Dark gradient background */}
+          <div className="absolute inset-0 bg-gradient-to-br from-[hsl(160,25%,8%)] via-[hsl(155,20%,12%)] to-[hsl(145,30%,6%)]" />
 
-          {/* Decorative geometric shapes */}
-          <div className="absolute top-[-60px] right-[-60px] w-[280px] h-[280px] border-[40px] border-white/[0.08] rounded-full" />
-          <div className="absolute bottom-[-50px] left-[-50px] w-[220px] h-[220px] border-[35px] border-white/[0.06] rounded-full" />
-          <div className="absolute top-[15%] right-[8%] w-24 h-24 border-[3px] border-white/[0.1] rounded-2xl rotate-45" />
-          <div className="absolute bottom-[20%] left-[6%] w-16 h-16 border-[3px] border-white/[0.08] rounded-full" />
-          <div className="absolute top-[50%] right-[25%] w-10 h-10 border-[3px] border-white/[0.07] rounded-lg rotate-12" />
-          <div className="absolute top-[30%] left-[20%] w-6 h-6 bg-white/[0.06] rounded-full" />
-          <div className="absolute bottom-[35%] right-[15%] w-4 h-4 bg-white/[0.05] rounded-full" />
-          <div className="absolute top-[70%] left-[35%] w-14 h-14 border-[2px] border-white/[0.06] rounded-xl -rotate-12" />
+          {/* Green glow accents */}
+          <div className="absolute top-[-100px] right-[-80px] w-[400px] h-[400px] rounded-full bg-primary/15 blur-[100px]" />
+          <div className="absolute bottom-[-80px] left-[-60px] w-[300px] h-[300px] rounded-full bg-primary/10 blur-[80px]" />
+          <div className="absolute top-[40%] left-[50%] w-[200px] h-[200px] rounded-full bg-primary/8 blur-[60px]" />
+
+          {/* Geometric shapes */}
+          <div className="absolute top-[-50px] right-[-50px] w-[240px] h-[240px] border-[30px] border-primary/[0.08] rounded-full" />
+          <div className="absolute bottom-[-40px] left-[-40px] w-[200px] h-[200px] border-[25px] border-primary/[0.06] rounded-full" />
+          <div className="absolute top-[15%] right-[8%] w-20 h-20 border-[2px] border-primary/[0.12] rounded-2xl rotate-45" />
+          <div className="absolute bottom-[25%] left-[5%] w-14 h-14 border-[2px] border-primary/[0.1] rounded-full" />
+          <div className="absolute top-[60%] right-[20%] w-8 h-8 border-[2px] border-primary/[0.08] rounded-lg rotate-12" />
+
+          {/* Subtle grid pattern */}
+          <div
+            className="absolute inset-0 opacity-[0.03]"
+            style={{
+              backgroundImage:
+                "linear-gradient(hsl(145 80% 42% / 0.3) 1px, transparent 1px), linear-gradient(90deg, hsl(145 80% 42% / 0.3) 1px, transparent 1px)",
+              backgroundSize: "60px 60px",
+            }}
+          />
 
           {/* Content wrapper */}
           <div className="relative z-10 px-6 py-16 md:px-16 md:py-24 lg:px-24">
@@ -37,12 +49,12 @@ const CTASection = () => {
               transition={{ delay: 0.15 }}
               className="flex justify-center mb-8"
             >
-              <div className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-md rounded-full px-5 py-2 border border-white/20">
-                <Sparkles className="w-4 h-4 text-yellow-300" />
-                <span className="text-white/95 text-sm font-bold tracking-wider uppercase">
+              <div className="inline-flex items-center gap-2 bg-primary/15 backdrop-blur-md rounded-full px-5 py-2 border border-primary/25">
+                <Sparkles className="w-4 h-4 text-primary" />
+                <span className="text-primary text-sm font-bold tracking-wider uppercase">
                   Konsultasi Gratis
                 </span>
-                <Sparkles className="w-4 h-4 text-yellow-300" />
+                <Sparkles className="w-4 h-4 text-primary" />
               </div>
             </motion.div>
 
@@ -58,7 +70,7 @@ const CTASection = () => {
                 <br />
                 <span className="relative inline-block mt-1">
                   Anda{" "}
-                  <span className="relative">
+                  <span className="relative text-primary">
                     Profitable
                     <svg
                       className="absolute -bottom-2 left-0 w-full"
@@ -68,7 +80,7 @@ const CTASection = () => {
                     >
                       <path
                         d="M2 8C40 2 80 2 100 6C120 10 160 4 198 7"
-                        stroke="rgba(255,255,255,0.5)"
+                        stroke="hsl(145 80% 42% / 0.5)"
                         strokeWidth="3"
                         strokeLinecap="round"
                       />
@@ -84,9 +96,9 @@ const CTASection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.35 }}
-              className="text-white/75 text-base md:text-lg text-center max-w-lg mx-auto mb-10 leading-relaxed"
+              className="text-white/60 text-base md:text-lg text-center max-w-lg mx-auto mb-10 leading-relaxed"
             >
-              Konsultasi awal <span className="text-white font-extrabold">100% GRATIS</span> —
+              Konsultasi awal <span className="text-primary font-extrabold">100% GRATIS</span> —
               hubungi kami sekarang dan mulai transformasi bisnis gym Anda.
             </motion.p>
 
@@ -101,27 +113,27 @@ const CTASection = () => {
                 href="https://wa.me/6283898082061"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative inline-flex items-center justify-center gap-3 bg-white text-primary px-10 py-5 rounded-2xl font-extrabold text-lg hover:scale-[1.03] transition-all duration-300 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.4)]"
+                className="group relative inline-flex items-center justify-center gap-3 bg-primary text-primary-foreground px-10 py-5 rounded-2xl font-extrabold text-lg hover:scale-[1.03] transition-all duration-300 shadow-[0_20px_60px_-15px_hsl(145_80%_42%_/_0.4)]"
               >
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-white to-red-50 opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-primary to-[hsl(155,70%,45%)] opacity-0 group-hover:opacity-100 transition-opacity" />
                 <Phone className="w-5 h-5 relative z-10" />
                 <span className="relative z-10">Hubungi via WhatsApp</span>
                 <ArrowRight className="w-5 h-5 relative z-10 group-hover:translate-x-1.5 transition-transform" />
               </a>
             </motion.div>
 
-            {/* Divider with stars */}
+            {/* Divider */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={inView ? { opacity: 1 } : {}}
               transition={{ delay: 0.5 }}
               className="flex items-center justify-center gap-3 mb-10"
             >
-              <div className="h-px w-16 bg-gradient-to-r from-transparent to-white/30" />
-              <Star className="w-3 h-3 text-white/40 fill-white/40" />
-              <Star className="w-4 h-4 text-yellow-300/60 fill-yellow-300/60" />
-              <Star className="w-3 h-3 text-white/40 fill-white/40" />
-              <div className="h-px w-16 bg-gradient-to-l from-transparent to-white/30" />
+              <div className="h-px w-16 bg-gradient-to-r from-transparent to-primary/30" />
+              <Star className="w-3 h-3 text-primary/40 fill-primary/40" />
+              <Star className="w-4 h-4 text-primary/60 fill-primary/60" />
+              <Star className="w-3 h-3 text-primary/40 fill-primary/40" />
+              <div className="h-px w-16 bg-gradient-to-l from-transparent to-primary/30" />
             </motion.div>
 
             {/* Contact cards */}
@@ -141,15 +153,15 @@ const CTASection = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={inView ? { opacity: 1, y: 0 } : {}}
                   transition={{ delay: 0.65 + i * 0.1 }}
-                  className="group bg-white/[0.08] hover:bg-white/[0.15] backdrop-blur-md border border-white/[0.12] hover:border-white/25 rounded-2xl p-6 text-center transition-all duration-300 cursor-default"
+                  className="group bg-white/[0.04] hover:bg-primary/[0.08] backdrop-blur-md border border-white/[0.08] hover:border-primary/25 rounded-2xl p-6 text-center transition-all duration-300 cursor-default"
                 >
-                  <div className="w-12 h-12 rounded-xl bg-white/15 group-hover:bg-white/20 flex items-center justify-center mx-auto mb-4 transition-colors">
-                    <c.icon className="w-5 h-5 text-white" />
+                  <div className="w-12 h-12 rounded-xl bg-primary/15 group-hover:bg-primary/25 flex items-center justify-center mx-auto mb-4 transition-colors">
+                    <c.icon className="w-5 h-5 text-primary" />
                   </div>
                   <span className="font-bold text-white text-sm block break-all leading-snug">
                     {c.main}
                   </span>
-                  <span className="text-xs text-white/50 mt-2 block font-medium">{c.sub}</span>
+                  <span className="text-xs text-white/40 mt-2 block font-medium">{c.sub}</span>
                 </motion.div>
               ))}
             </motion.div>
