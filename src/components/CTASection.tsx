@@ -16,7 +16,7 @@ const CTASection = () => {
           className="relative overflow-hidden rounded-[2rem] md:rounded-[2.5rem]"
         >
           {/* Solid background */}
-          <div className="absolute inset-0 bg-[hsl(0,75%,45%)]" />
+          <div className="absolute inset-0 bg-primary" />
 
           {/* Decorative geometric shapes */}
           <div className="absolute top-[-60px] right-[-60px] w-[280px] h-[280px] border-[40px] border-white/[0.08] rounded-full" />
@@ -101,7 +101,7 @@ const CTASection = () => {
                 href="https://wa.me/6283898082061"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative inline-flex items-center justify-center gap-3 bg-white text-[hsl(0,75%,42%)] px-10 py-5 rounded-2xl font-extrabold text-lg hover:scale-[1.03] transition-all duration-300 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.4)]"
+                className="group relative inline-flex items-center justify-center gap-3 bg-white text-primary px-10 py-5 rounded-2xl font-extrabold text-lg hover:scale-[1.03] transition-all duration-300 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.4)]"
               >
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-white to-red-50 opacity-0 group-hover:opacity-100 transition-opacity" />
                 <Phone className="w-5 h-5 relative z-10" />
