@@ -36,8 +36,8 @@ const HeroSection = () => {
               transition={{ delay: 0.3 }}
               className="text-lg text-muted-foreground max-w-lg mb-8 leading-relaxed"
             >
-              Dari sertifikasi karyawan, manajemen operasional, hingga strategi balik modal lebih cepat — 
-              semua kami tangani. <span className="text-foreground font-semibold">Satu pintu, tanpa ribet.</span>
+              Bisnis gym yang lebih menguntungkan dan management profesional.{" "}
+              <span className="text-foreground font-semibold">Satu pintu, tanpa ribet.</span>
             </motion.p>
 
             <motion.div

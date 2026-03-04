@@ -42,9 +42,6 @@ const PortfolioSection = () => {
             { city: "Jakarta", gyms: ["4FIT Cengkareng", "Palm Fitness", "NTIATOS"] },
             { city: "Bekasi", gyms: ["REVO TOWN Bekasi", "Gym Bekasi Pekayon"] },
             { city: "Bandung", gyms: ["Indeep Gym", "Extira Gym", "Maximl Fitness"] },
-            { city: "Bali", gyms: ["Prezo Gym Nusa Dua", "Prezo Gym Ubud", "Banjar Ubud"] },
-            { city: "Depok & Cinere", gyms: ["WILLI Cinere", "Voga Cinere", "NNORA Fitness"] },
-            { city: "Lainnya", gyms: ["Globalo Fitness", "ADA Sport Club", "One Life Smart Gym"] },
           ].map((loc) => (
             <div
               key={loc.city}
